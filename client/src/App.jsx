@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import FashionHouse from "./components/FashionHouse";
+import ProductDetails from './components/ProductDetails';
+import AdminView from './components/AdminView';
+import { Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [houseName, setHouseName] = useState("");
+  const [collectionYear, setCollectionYear] = useState("");
+
+  useEffect(() => {
+    async function fetchHouseData() {
+      try {
+        const response = await fetch("/api/products/shows/1");
+        const data = await response.json();
+
+        setHouseName(data.house_name);
+        setCollectionYear(data.collectionYear);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchHouseData();
+  }, []); 
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      <header>
+        <div className="header-styling">
+        <h1>{houseName}</h1>
+        <h2>{collectionYear}</h2>
+        </div>
+      </header>
+      
+      <Routes>
+        <Route path="/" element={<FashionHouse />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/admin" element={<AdminView />} />
+      </Routes>
+    </div>
   )
 }
 
-export default App
+export default App;

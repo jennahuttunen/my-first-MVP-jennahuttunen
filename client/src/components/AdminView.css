@@ -1,0 +1,81 @@
+/* General form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for each section */
+  h2 {
+    margin-bottom: 10px; 
+    font-size: 18px;
+  }
+  
+  /* Labels to display titles */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  /* Input boxes to span full width */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px; 
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+  }
+  
+  /* Input box focus state */
+  input[type="text"]:focus {
+    border-color: black;
+    background-color: white;
+  }
+  
+  /* Submit button styling */
+  input[type="submit"] {
+    background-color: white;
+    border: 0px;
+    padding: 1px 1px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 2px 0;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for submit button */
+  input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
+
+  /* Styling for headers only within form */
+  form h2 {
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.133); 
+    padding-bottom: 1px;
+    margin-bottom: 12px; 
+}
+
+/* Change the font of everything */
+form {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Product description styling */
+textarea {
+    width: 100%;
+    height: 150px; 
+    box-sizing: border-box; 
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 1px solid black; 
+    outline: none;
+    resize: none;
+}

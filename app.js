@@ -4,8 +4,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var showsRouter = require('./routes/shows');
+var productsRouter = require('./routes/products');
+
+// import the database somewhere?
 
 var app = express();
 
@@ -16,7 +18,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', indexRouter);
-app.use('/api/users', usersRouter);
+app.use('/api/shows', showsRouter);
+app.use('/api/products', productsRouter);
+
+// Get home page
+app.get('/', function (req, res) {
+    res.send({ message: 'Welcome to the homepage' });
+  });
 
 module.exports = app;
+

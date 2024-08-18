@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Libre+Barcode+39+Text&family=Montserrat+Subrayada:wght@400;700&family=Mrs+Saint+Delafield&family=Playwrite+SK:wght@100..400&family=Staatliches&display=swap');
+
+a {
+  text-align: left;
+}
+
+.product-details-container {
+  padding: 20px; 
+  position: relative; 
+}
+
+.back-link {
+  margin-bottom: 9px;
+}
+
+.back-link a {
+  text-decoration: none; 
+  color: rgba(0, 0, 0, 0.833); 
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 11.5px;
+  font-weight: normal; 
+  display: block;
+  margin-left: 5.5px;
+}
+
+.back-link a:hover {
+  color: #d4af3795; 
+}
+
+.product-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  position: relative; 
+}
+
+.product-image {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 20px; 
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-info {
+    flex: 1;
+    max-width: 50%;
+    text-align: left; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+  }
+
+.product-name {
+  font-family: "Montserrat Subrayada", sans-serif; 
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 2px; 
+  margin-bottom: 10px; 
+}
+
+.product-description {
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  white-space: pre-line;
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.893);
+}
+
+.navigation-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navigation-buttons button {
+    margin-top: 2px;
+    border: none;
+    color: rgba(0, 0, 0, 0.833); 
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  .navigation-buttons button:hover {
+    background-color: white; 
+    color: #d4af3795; 
+  }
+
+  .product-image {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+    position: relative;
+    padding-top: 75%;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .inquiries-info {
+    padding-top: 15px;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 0.8;
+    color: rgba(0, 0, 0, 0.795);
+  }
