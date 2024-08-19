@@ -30,7 +30,6 @@ Front-end: React, React Router, Vite, CSS, HTML
 
 ## Dependencies
 
-* Clone the repository
 * Run `npm install` in the project folder to install dependencies related to Express (the server).
 * `cd client` and run `npm install` to install dependencies related to React (the client).
 
